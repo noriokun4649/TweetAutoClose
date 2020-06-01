@@ -1,7 +1,11 @@
+let urlhistory;
 chrome.tabs.onUpdated.addListener(function (tabId, changeinfo, tab) {
-    if (~tab.url.indexOf("https://twitter.com/intent/tweet/complete")) {
-        if (changeinfo.status === "complete") {
-            chrome.tabs.remove(tabId);
+    if (changeinfo.status === "complete") {
+        if (~tab.url.indexOf("https://twitter.com/")) {
+            if (urlhistory.indexOf("https://twitter.com/intent/tweet") === 0) {
+                chrome.tabs.remove(tabId);
+            }
         }
+        urlhistory = tab.url;
     }
 });
