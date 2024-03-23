@@ -3,7 +3,7 @@
     "name": "Twitter共有後自動でタブ閉じるやぁーつ",
     "short_name": "TweetAutoClose",
     "description": "ブログやサイトなどに置かれているTwitterの共有ボタンから記事などを共有後の「ツイートが投稿されました」のページを自動で閉じる拡張機能です。",
-    "version": "1.0.3",
+    "version": "1.0.2",
     "icons": {
         "128": "icon.png"
     },
